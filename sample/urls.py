@@ -14,7 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
+    path('products', include('products.urls'))
 ]
+
+# localhost:8000/products 연결된다는 뜻
+
+#python manage.py startapp products
